@@ -177,9 +177,9 @@ print()
 # Writes .pio/build/<env>/openknx-build.json with the DEVICE_ID / DEVICE_NAME
 # the firmware is built for; Build-ReleaseJson.ps1 copies them into
 # release/data/openknx-release.json. The values are resolved exactly like the
-# firmware sees them: the preprocessor of the active toolchain is run with the
-# env's defines and include paths over include/hardware.h (which pulls in the
-# OGM-HardwareConfig headers and may define DEVICE_ID itself). A textual scan
+# firmware sees them: the preprocessor of the active toolchain expands DEVICE_ID
+# and DEVICE_NAME with the env's defines and include paths over include/hardware.h
+# (which pulls in the OGM-HardwareConfig headers and may define DEVICE_ID itself). A textual scan
 # of the headers is not an option, the nested #ifdef blocks decide which
 # definition applies. Envs without a DEVICE_ID get an empty object. Any problem
 # here is only reported, it never fails the build.
@@ -189,16 +189,19 @@ def _generate_openknx_build_json():
     print("{}Generate openknx-build.json{}".format(console_color.YELLOW, console_color.END))
     build_info = {}
     try:
-        words = projenv.subst_list("$CXX -x c++ $CXXFLAGS $CCFLAGS $CPPFLAGS $_CPPDEFFLAGS $_CPPINCFLAGS -E -dM -")[0]
+        words = projenv.subst_list("$CXX -x c++ $CXXFLAGS $CCFLAGS $CPPFLAGS $_CPPDEFFLAGS $_CPPINCFLAGS -E -P -")[0]
         cmd = " ".join(escape_list(words, projenv["ESCAPE"]))
-        result = subprocess.run(cmd, shell=True, input="#include <hardware.h>\n", capture_output=True,
+        # the markers get the macros expanded, so DEVICE_ID PREFIX_ID "-X" style
+        # definitions come out as adjacent string literals and are joined here
+        snippet = "#include <hardware.h>\nOPENKNX_MARK_deviceId DEVICE_ID\nOPENKNX_MARK_deviceName DEVICE_NAME\n"
+        result = subprocess.run(cmd, shell=True, input=snippet, capture_output=True,
                                 encoding="utf-8", errors="replace", env=projenv["ENV"], cwd=projenv.subst("$PROJECT_DIR"))
         if result.returncode != 0:
             print("{}  Preprocessing hardware.h failed: {}{}".format(console_color.YELLOW, result.stderr.strip(), console_color.END))
-        for key, define in (("deviceId", "DEVICE_ID"), ("deviceName", "DEVICE_NAME")):
-            match = re.search(r'^#define {} "(.*)"$'.format(define), result.stdout, re.MULTILINE)
-            if match:
-                build_info[key] = match.group(1)
+        for key, value in re.findall(r'^OPENKNX_MARK_(\w+) (.*)$', result.stdout, re.MULTILINE):
+            literals = re.findall(r'"((?:[^"\\]|\\.)*)"', value)
+            if literals:
+                build_info[key] = "".join(literals)
         if build_info:
             print("{}  Device: {} ({}){}".format(console_color.CYAN, build_info.get("deviceName"), build_info.get("deviceId"), console_color.END))
         else:
