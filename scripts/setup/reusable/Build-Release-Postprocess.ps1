@@ -71,6 +71,7 @@ else {
 
 $appVersion = "$appMajor.$appMinor"
 $appVersion = "$appVersion.$appRev"
+lib/OGM-Common/scripts/setup/reusable/Build-ReleaseJson.ps1 Finish -Version $appVersion
 
 
 # create dependency file

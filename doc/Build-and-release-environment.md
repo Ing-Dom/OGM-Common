@@ -237,6 +237,10 @@ Dieses Skript macht alle Abschlussarbeiten nach einem Release-Build, räumt auf,
 
 Dieses Skript baut eine einzelne Release-Hardware-Version unter Berücksichtigung der Build-Skripte.
 
+#### **Build-ReleaseJson.ps1**
+
+Dieses Skript wird von den drei vorigen Skripten aufgerufen und pflegt `release/data/openknx-release.json`, eine maschinenlesbare Beschreibung des Releases neben der `content.xml`: Applikations-ID, Name, Release-Kennung, Version, Build-Zeitpunkt sowie je Firmware `DEVICE_ID`/`DEVICE_NAME` (aus der vom Build erzeugten `.pio/build/<env>/openknx-build.json`), Prozessor, Feature-Set, Upload-Wege und Firmware-Pfade. Fehler darin brechen den Build nicht ab, sondern werden nur als Warnung ausgegeben.
+
 #### **Readme-Release.txt**
 
 Dieses Textfile beschreibt, wie man ein OpenKNX-Release installiert und wird unverändert in das Setup kopiert.

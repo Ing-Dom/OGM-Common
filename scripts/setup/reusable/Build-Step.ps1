@@ -211,6 +211,7 @@ if (Test-Path -Path $releaseTarget -PathType Leaf) {
   $XMLContent = "         <Product Name=""$productName"" Firmware=""../Firmware/$CopyItem_Target_Device/$CopyItem_Target_Name"" Processor=""$processor"" />"
   $lineExists = Select-String -Path $fileName -Pattern $XMLContent -Quiet
   if (-not $lineExists) { Add-Content -Path $releaseTarget -Value $XMLContent }
+  & $PSScriptRoot/Build-ReleaseJson.ps1 AddProduct -PioEnv $pioEnv -ProductName $productName -Processor $processor -FeatureSet $featureSet -FirmwareDir "Firmware/$CopyItem_Target_Device" -FirmwareName $CopyItem_Target_Name -OtaName "$firmwareName.$OTAbinaryFormat" -WithIP:$withIP -WithTP:$withTP -ProjectDir $ProjectDir
 }
 else {
   Write-Host "ERROR - Buildstep: $releaseTarget could not be found!" -ForegroundColor Red
