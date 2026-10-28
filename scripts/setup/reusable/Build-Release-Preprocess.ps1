@@ -147,7 +147,7 @@ if (Test-Path -Path $releaseTarget -PathType Leaf) {
   Add-Content -Path $releaseTarget "    <ETSapp Name=""$($settings.targetName)"" XmlFile=""$($settings.targetName).xml"" />"
   Add-Content -Path $releaseTarget "    <Products>"
   Write-Host "Created $releaseTarget" -ForegroundColor Blue 
-  lib/OGM-Common/scripts/setup/reusable/Build-ReleaseJson.ps1 Init -AppName $settings.targetName -Label $settings.appRelease -ProjectDir $ProjectDir
+  & $PSScriptRoot/Build-ReleaseJson.ps1 Init -AppName $settings.targetName -Label $settings.appRelease -ProjectDir $ProjectDir
 }
 else {
   Write-Host "Pre - ERROR: $releaseTarget could not be found!" -ForegroundColor Red
