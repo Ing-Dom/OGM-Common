@@ -1,0 +1,35 @@
+{
+  "formatVersion": 1,
+  "appId": "0xA012",
+  "appName": "RaumController",
+  "label": "Release",
+  "version": "5.5.1",
+  "built": "2026-10-28T08:32:24Z",
+  "products": [
+    {
+      "name": "OpenKNX-REG1-BASE",
+      "deviceId": "REG1-Base",
+      "deviceName": "OpenKNX REG1 Basismodul",
+      "processor": "RP2040",
+      "featureSet": "rp2040-tp",
+      "upload": [
+        "usb",
+        "knx"
+      ],
+      "firmware": "Firmware/OpenKNX-REG1-BASE/firmware-OpenKNX-REG1-BASE.uf2"
+    },
+    {
+      "name": "OpenKNX-REG1-LAN-TP-BASE",
+      "deviceId": "REG1-LAN-TP-Base",
+      "deviceName": "OpenKNX REG1 Basismodul LAN+TP",
+      "processor": "ESP32",
+      "featureSet": "esp32-tpip",
+      "upload": [
+        "usb",
+        "ota"
+      ],
+      "firmware": "Firmware/OpenKNX-REG1-LAN-TP-BASE/firmware-OpenKNX-REG1-LAN-TP-BASE.factory.bin",
+      "ota": "Firmware/OpenKNX-REG1-LAN-TP-BASE/firmware-OpenKNX-REG1-LAN-TP-BASE.bin"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Content>
+    <ETSapp Name="RaumController" XmlFile="RaumController.xml" />
+    <Products>
+         <Product Name="OpenKNX-REG1-BASE" Firmware="../Firmware/OpenKNX-REG1-BASE/firmware-OpenKNX-REG1-BASE.uf2" Processor="RP2040" />
+         <Product Name="OpenKNX-REG1-LAN-TP-BASE" Firmware="../Firmware/OpenKNX-REG1-LAN-TP-BASE/firmware-OpenKNX-REG1-LAN-TP-BASE.factory.bin" Processor="ESP32" />
+    </Products>
+</Content>

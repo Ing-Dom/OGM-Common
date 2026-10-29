@@ -1,0 +1,21 @@
+{
+  "formatVersion": 1,
+  "appName": "Test",
+  "label": "Beta",
+  "version": "1.0.0",
+  "built": "2026-10-28T08:24:51Z",
+  "products": [
+    {
+      "name": "X",
+      "deviceId": "UP1-Test",
+      "deviceName": "OpenKNX UP1 Gerät für Tests",
+      "processor": "RP2040",
+      "featureSet": "rp2040-tp",
+      "upload": [
+        "usb",
+        "knx"
+      ],
+      "firmware": "Firmware/X/f.uf2"
+    }
+  ]
+}

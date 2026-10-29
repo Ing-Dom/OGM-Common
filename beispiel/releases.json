@@ -1,0 +1,538 @@
+{
+  "OpenKnxContentType": "OpenKNX/OAM/Releases",
+  "OpenKnxFormatVersion": "v0.4.0",
+  "generated": "2026-10-28T06:29:00Z",
+  "data": {
+    "OAM-RaumController": {
+      "repo_url": "https://github.com/OpenKNX/OAM-RaumController",
+      "archived": false,
+      "description": "OpenKNX Applikation mit allen notwendigen Modulen, um einen Raum in einem Haus zu automatisieren",
+      "releases": [
+        {
+          "prerelease": false,
+          "tag_name": "v5.5.1",
+          "name": "v5.5.1",
+          "published_at": "2026-06-21T19:20:32Z",
+          "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.5.1",
+          "body": "- Update auf aktuelle OpenKNX-Module\n- Fehlerkorrekturen Präsenz",
+          "assets": [
+            {
+              "name": "RaumController-Release-5.5.1.zip",
+              "size": 4120033,
+              "digest": "sha256:1f0c…",
+              "updated_at": "2026-06-21T19:19:10Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/v5.5.1/RaumController-Release-5.5.1.zip",
+              "releaseFile": true,
+              "appId": "0xA012",
+              "appName": "RaumController",
+              "label": "release",
+              "version": "5.5.1",
+              "products": [
+                {
+                  "deviceId": "REG1-Base",
+                  "deviceName": "REG1 Basismodul",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Base",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Base/firmware-OpenKNX-REG1-Base.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG1-Base-V0",
+                  "deviceName": "REG1 Basismodul V0",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Base-V0",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Base-V0/firmware-OpenKNX-REG1-Base-V0.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG1-Base-IP",
+                  "deviceName": "REG1 Basismodul IP",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Basismodul-IP",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-ip",
+                  "upload": [
+                    "usb",
+                    "ota"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Basismodul-IP/firmware-OpenKNX-REG1-Basismodul-IP.uf2",
+                  "ota": "Firmware/OpenKNX-REG1-Basismodul-IP/firmware-OpenKNX-REG1-Basismodul-IP.bin"
+                },
+                {
+                  "deviceId": "REG1-LAN-TP-Base",
+                  "deviceName": "REG1 Basismodul LAN+TP",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-LAN-TP-Base",
+                  "processor": "ESP32",
+                  "featureSet": "esp32-tpip",
+                  "upload": [
+                    "usb",
+                    "ota"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-LAN-TP-Base/firmware-OpenKNX-REG1-LAN-TP-Base.factory.bin",
+                  "ota": "Firmware/OpenKNX-REG1-LAN-TP-Base/firmware-OpenKNX-REG1-LAN-TP-Base.bin"
+                },
+                {
+                  "deviceId": "UP1-SEN-8x",
+                  "deviceName": "UP1 8xSensor",
+                  "variant": null,
+                  "name": "OpenKNX-UP1-SEN-8x",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-UP1-SEN-8x/firmware-OpenKNX-UP1-SEN-8x.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "UP1-PM-HF",
+                  "deviceName": "UP1 Präsenzmelder+",
+                  "variant": null,
+                  "name": "OpenKNX-UP1-PM-HF",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-UP1-PM-HF/firmware-OpenKNX-UP1-PM-HF.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "UP1-TAS-4x",
+                  "deviceName": "UP1 Taster",
+                  "variant": null,
+                  "name": "OpenKNX-UP1-TAS-4x",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-UP1-TAS-4x/firmware-OpenKNX-UP1-TAS-4x.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "PiPico-BCU-Connector",
+                  "deviceName": "PiPico BCU Connector",
+                  "variant": null,
+                  "name": "OpenKNX-PiPico-BCU-Connector",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-PiPico-BCU-Connector/firmware-OpenKNX-PiPico-BCU-Connector.uf2",
+                  "ota": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prerelease": false,
+          "tag_name": "v5.1.5",
+          "name": "v5.1.5",
+          "published_at": "2025-10-31T08:27:03Z",
+          "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.1.5",
+          "body": "Erstes Release des RaumControllers",
+          "assets": [
+            {
+              "name": "RaumController-Release-5.1.5.zip",
+              "size": 3988120,
+              "digest": "sha256:7a21…",
+              "updated_at": "2025-10-31T08:26:00Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/v5.1.5/RaumController-Release-5.1.5.zip",
+              "releaseFile": false,
+              "appId": null,
+              "appName": null,
+              "label": "release",
+              "version": "5.1.5",
+              "products": []
+            }
+          ]
+        }
+      ]
+    },
+    "OAM-Meter": {
+      "repo_url": "https://github.com/OpenKNX/OAM-Meter",
+      "archived": false,
+      "description": null,
+      "releases": [
+        {
+          "prerelease": false,
+          "tag_name": "1.0.0",
+          "name": "1.0.0",
+          "published_at": "2026-08-14T20:27:44Z",
+          "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/1.0.0",
+          "body": "Erstes stabiles Release. Neu: Wireless M-Bus auf dem REG1-GW-RF868M.",
+          "assets": [
+            {
+              "name": "MeterModule-Release-1.0.0.zip",
+              "size": 2550811,
+              "digest": "sha256:9bd4…",
+              "updated_at": "2026-08-14T20:26:30Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/1.0.0/MeterModule-Release-1.0.0.zip",
+              "releaseFile": true,
+              "appId": "0xA304",
+              "appName": "MeterModule",
+              "label": "release",
+              "version": "1.0.0",
+              "products": [
+                {
+                  "deviceId": "REG1-Base",
+                  "deviceName": "REG1 Basismodul",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Base",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Base/firmware-OpenKNX-REG1-Base.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG1-Base-V0",
+                  "deviceName": "REG1 Basismodul V0",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Base-V0",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Base-V0/firmware-OpenKNX-REG1-Base-V0.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG1-Base-IP",
+                  "deviceName": "REG1 Basismodul IP",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Basismodul-IP",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-ip",
+                  "upload": [
+                    "usb",
+                    "ota"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Basismodul-IP/firmware-OpenKNX-REG1-Basismodul-IP.uf2",
+                  "ota": "Firmware/OpenKNX-REG1-Basismodul-IP/firmware-OpenKNX-REG1-Basismodul-IP.bin"
+                },
+                {
+                  "deviceId": "REG1-SEN-Multi",
+                  "deviceName": "REG1 Multisensor",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-MultiSensor",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-MultiSensor/firmware-OpenKNX-REG1-MultiSensor.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG1-GW-RF868M",
+                  "deviceName": "REG1 868MHz-Gateway",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-GW-RF868M",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-GW-RF868M/firmware-OpenKNX-REG1-GW-RF868M.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "PiPico-BCU-Connector",
+                  "deviceName": "PiPico BCU Connector",
+                  "variant": null,
+                  "name": "OpenKNX-PiPico-BCU-Connector",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-PiPico-BCU-Connector/firmware-OpenKNX-PiPico-BCU-Connector.uf2",
+                  "ota": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prerelease": false,
+          "tag_name": "0.6.0",
+          "name": "0.6.0",
+          "published_at": "2025-07-04T21:59:12Z",
+          "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/0.6.0",
+          "body": "Beta: Multisensor-Unterstützung",
+          "assets": [
+            {
+              "name": "MeterModule-Beta-0.6.zip",
+              "size": 2310044,
+              "digest": "sha256:c0ff…",
+              "updated_at": "2025-07-04T21:58:00Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/0.6.0/MeterModule-Beta-0.6.zip",
+              "releaseFile": false,
+              "appId": null,
+              "appName": null,
+              "label": "beta",
+              "version": "0.6.0",
+              "products": []
+            }
+          ]
+        }
+      ]
+    },
+    "OAM-IP-Router": {
+      "repo_url": "https://github.com/OpenKNX/OAM-IP-Router",
+      "archived": false,
+      "description": "OpenKNX IP-Router Application",
+      "releases": [
+        {
+          "prerelease": false,
+          "tag_name": "0.7.0",
+          "name": "0.7.0",
+          "published_at": "2026-03-05T18:08:45Z",
+          "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.7.0",
+          "body": "- Tunneling-Verbindungen stabilisiert",
+          "assets": [
+            {
+              "name": "IP-Router-Release-0.7.0.zip",
+              "size": 1880411,
+              "digest": "sha256:33ab…",
+              "updated_at": "2026-03-05T18:07:50Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.7.0/IP-Router-Release-0.7.0.zip",
+              "releaseFile": true,
+              "appId": "0xA11F",
+              "appName": "IP-Router",
+              "label": "release",
+              "version": "0.7.0",
+              "products": [
+                {
+                  "deviceId": "REG1-Eth",
+                  "deviceName": "REG1 LAN Gateway",
+                  "variant": null,
+                  "name": "IP-Router-REG1-Eth",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tpip",
+                  "upload": [
+                    "usb",
+                    "ota",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/IP-Router-REG1-Eth/firmware-IP-Router-REG1-Eth.uf2",
+                  "ota": "Firmware/IP-Router-REG1-Eth/firmware-IP-Router-REG1-Eth.bin"
+                },
+                {
+                  "deviceId": "REG1-LAN-TP-Base",
+                  "deviceName": "REG1 Basismodul LAN+TP",
+                  "variant": null,
+                  "name": "IP-Router-REG1-LAN-TP-Base",
+                  "processor": "ESP32",
+                  "featureSet": "esp32-tpip",
+                  "upload": [
+                    "usb",
+                    "ota"
+                  ],
+                  "firmware": "Firmware/IP-Router-REG1-LAN-TP-Base/firmware-IP-Router-REG1-LAN-TP-Base.factory.bin",
+                  "ota": "Firmware/IP-Router-REG1-LAN-TP-Base/firmware-IP-Router-REG1-LAN-TP-Base.bin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prerelease": true,
+          "tag_name": "0.7.1-Dev",
+          "name": "0.7.1-Dev",
+          "published_at": "2026-09-12T20:10:00Z",
+          "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.7.1-Dev",
+          "body": "Dev-Release mit Secure-Tunneling-Vorschau",
+          "assets": [
+            {
+              "name": "IP-Router-Dev-0.7.1.zip",
+              "size": 1901200,
+              "digest": "sha256:51de…",
+              "updated_at": "2026-09-12T20:09:10Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.7.1-Dev/IP-Router-Dev-0.7.1.zip",
+              "releaseFile": true,
+              "appId": "0xA11E",
+              "appName": "IP-Router-Dev",
+              "label": "dev",
+              "version": "0.7.1",
+              "products": [
+                {
+                  "deviceId": "REG1-Eth",
+                  "deviceName": "REG1 LAN Gateway",
+                  "variant": null,
+                  "name": "IP-Router-REG1-Eth",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tpip",
+                  "upload": [
+                    "usb",
+                    "ota",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/IP-Router-REG1-Eth/firmware-IP-Router-REG1-Eth.uf2",
+                  "ota": "Firmware/IP-Router-REG1-Eth/firmware-IP-Router-REG1-Eth.bin"
+                },
+                {
+                  "deviceId": "REG1-LAN-TP-Base",
+                  "deviceName": "REG1 Basismodul LAN+TP",
+                  "variant": null,
+                  "name": "IP-Router-REG1-LAN-TP-Base",
+                  "processor": "ESP32",
+                  "featureSet": "esp32-tpip",
+                  "upload": [
+                    "usb",
+                    "ota"
+                  ],
+                  "firmware": "Firmware/IP-Router-REG1-LAN-TP-Base/firmware-IP-Router-REG1-LAN-TP-Base.factory.bin",
+                  "ota": "Firmware/IP-Router-REG1-LAN-TP-Base/firmware-IP-Router-REG1-LAN-TP-Base.bin"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "OAM-StateEngine": {
+      "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
+      "archived": false,
+      "description": "State Machines for KNX configurable via ETS",
+      "releases": [
+        {
+          "prerelease": false,
+          "tag_name": "v0.8.2",
+          "name": "v0.8.2",
+          "published_at": "2026-04-05T21:24:05Z",
+          "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.8.2",
+          "body": "- Fehlerkorrektur Zeitübergänge",
+          "assets": [
+            {
+              "name": "StateEngine-DFA16-Release-0.8.2.zip",
+              "size": 2044310,
+              "digest": "sha256:e77c…",
+              "updated_at": "2026-04-05T21:23:00Z",
+              "browser_download_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/download/v0.8.2/StateEngine-DFA16-Release-0.8.2.zip",
+              "releaseFile": true,
+              "appId": "0xAC0D",
+              "appName": "StateEngine-DFA16",
+              "label": "dfa16",
+              "version": "0.8.2",
+              "products": [
+                {
+                  "deviceId": "REG1-Base",
+                  "deviceName": "REG1 Basismodul",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Base",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Base/firmware-OpenKNX-REG1-Base.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG1-Base-V0",
+                  "deviceName": "REG1 Basismodul V0",
+                  "variant": null,
+                  "name": "OpenKNX-REG1-Base-V0",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG1-Base-V0/firmware-OpenKNX-REG1-Base-V0.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "PiPico-BCU-Connector",
+                  "deviceName": "PiPico BCU Connector",
+                  "variant": null,
+                  "name": "OpenKNX-PiPico-BCU-Connector",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-PiPico-BCU-Connector/firmware-OpenKNX-PiPico-BCU-Connector.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "REG2-PiPico-V1",
+                  "deviceName": "REG2 PiPico V1",
+                  "variant": null,
+                  "name": "OpenKNX-REG2-PiPico-V1",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-REG2-PiPico-V1/firmware-OpenKNX-REG2-PiPico-V1.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "OpenKNXiao-Mini-RP2040-V1",
+                  "deviceName": "OpenKNXiao Mini RP2040 V1",
+                  "variant": null,
+                  "name": "OpenKNX-XIAO-RP2040-Mini_V1",
+                  "processor": "RP2040",
+                  "featureSet": "rp2040-tp",
+                  "upload": [
+                    "usb",
+                    "knx"
+                  ],
+                  "firmware": "Firmware/OpenKNX-XIAO-RP2040-Mini_V1/firmware-OpenKNX-XIAO-RP2040-Mini_V1.uf2",
+                  "ota": null
+                },
+                {
+                  "deviceId": "OpenKNXiao-Mini-ESP32-V1",
+                  "deviceName": "OpenKNXiao Mini ESP32 V1",
+                  "variant": null,
+                  "name": "OpenKNX-XIAO-ESP32S3-Mini_V1",
+                  "processor": "ESP32",
+                  "featureSet": "esp32-tp",
+                  "upload": [
+                    "usb"
+                  ],
+                  "firmware": "Firmware/OpenKNX-XIAO-ESP32S3-Mini_V1/firmware-OpenKNX-XIAO-ESP32S3-Mini_V1.factory.bin",
+                  "ota": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

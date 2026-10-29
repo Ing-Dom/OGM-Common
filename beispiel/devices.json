@@ -1,0 +1,268 @@
+{
+  "OpenKnxContentType": "OpenKNX/Devices",
+  "OpenKnxFormatVersion": "v1.0.0",
+  "generated": "2026-10-28T06:29:00Z",
+  "source": "https://github.com/OpenKNX/OGM-HardwareConfig/tree/v1/devices",
+  "data": {
+    "REG1-Base": {
+      "name": "REG1 Basismodul",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "knx": [
+        "tp"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene. Ideale Basis für Applikationen mit keinem oder wenig IO-Bedarf. 1x 4Pin Sensoranschluss UART/I2C inkl. 3.3V Versorgung auf steckbarer 3.5mm Schraubklemme.",
+      "source": "https://muster.ing-dom.de/KNX-Geraete/OpenKNX-REG1-Base-Komplettbausatz.html",
+      "links": {
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1813112-openknx-reg1-erweiterbare-1te-hutschienengeraete-powered-by-rp2040",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-Base.jpg",
+      "wiki": "https://device.openknx.de/REG1-Base",
+      "applications": {
+        "OAM-RaumController": {
+          "since": "5.5.1",
+          "latest": "5.5.1"
+        },
+        "OAM-Meter": {
+          "since": "1.0.0",
+          "latest": "1.0.0"
+        },
+        "OAM-StateEngine": {
+          "since": "0.8.2",
+          "latest": "0.8.2"
+        }
+      }
+    },
+    "REG1-Base-V0": {
+      "name": "REG1 Basismodul V0",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "knx": [
+        "tp"
+      ],
+      "status": "deprecated",
+      "availability": [
+        "opensource"
+      ],
+      "description": "Erste Entwicklungsserie des REG1 Basismoduls. Komponenten und Firmware inkompatibel zu REG1-Base.",
+      "links": {
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-Base-V0.jpg",
+      "wiki": "https://device.openknx.de/REG1-Base-V0",
+      "applications": {
+        "OAM-RaumController": {
+          "since": "5.5.1",
+          "latest": "5.5.1"
+        },
+        "OAM-Meter": {
+          "since": "1.0.0",
+          "latest": "1.0.0"
+        },
+        "OAM-StateEngine": {
+          "since": "0.8.2",
+          "latest": "0.8.2"
+        }
+      }
+    },
+    "REG1-Base-IP": {
+      "name": "REG1 Basismodul IP",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "knx": [
+        "ip"
+      ],
+      "status": "deprecated",
+      "availability": [
+        "opensource"
+      ],
+      "description": "KNX-IP Reiheneinbaugerät für 35mm Hutschiene. Ersetzt durch REG1-LAN-TP-Base.",
+      "links": {
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-Base-IP.jpg",
+      "wiki": "https://device.openknx.de/REG1-Base-IP",
+      "applications": {
+        "OAM-RaumController": {
+          "since": "5.5.1",
+          "latest": "5.5.1"
+        },
+        "OAM-Meter": {
+          "since": "1.0.0",
+          "latest": "1.0.0"
+        }
+      }
+    },
+    "REG1-Eth": {
+      "name": "REG1 LAN Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "knx": [
+        "tp",
+        "ip"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene und REG1-App-Eth Erweiterung mit 10/100Base-T Ethernet. Komplett busversorgt. Ideale Basis für Interoperabilität zwischen KNX und IP-Welt.",
+      "source": "https://muster.ing-dom.de/KNX-Geraete/OpenKNX-REG1-Eth-Komplettbausatz.html",
+      "links": {
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1813112-openknx-reg1-erweiterbare-1te-hutschienengeraete-powered-by-rp2040",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-Eth.jpg",
+      "wiki": "https://device.openknx.de/REG1-Eth",
+      "applications": {
+        "OAM-IP-Router": {
+          "since": "0.7.0",
+          "latest": "0.7.0"
+        }
+      }
+    },
+    "REG1-LAN-TP-Base": {
+      "name": "REG1 Basismodul LAN+TP",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "ESP32",
+      "knx": [
+        "tp",
+        "ip"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene mit 10/100Base-T Ethernet. Komplett busversorgt. Ideale Basis für Interoperabilität zwischen KNX und IP-Welt.",
+      "source": "https://samples.ing-dom.de/produkt/openknx-reg1-lan-tp-base-komplettbausatz/",
+      "links": {
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2016368-openknx-reg1-goes-esp32",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-LAN-TP-Base.jpg",
+      "wiki": "https://device.openknx.de/REG1-LAN-TP-Base",
+      "applications": {
+        "OAM-RaumController": {
+          "since": "5.5.1",
+          "latest": "5.5.1"
+        },
+        "OAM-IP-Router": {
+          "since": "0.7.0",
+          "latest": "0.7.0"
+        }
+      }
+    },
+    "REG1-SEN-Multi": {
+      "name": "REG1 Multisensor",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "sensor",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "knx": [
+        "tp"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene und Multi-Sensor Erweiterungsplatine. 3x Sensoranschluss UART/I2C, 3x galvanisch getrennte Binäreingänge für potentialfreie Kontakte.",
+      "source": "https://muster.ing-dom.de/OpenKNX-REG1/OpenKNX-REG1-SEN-Multi-Komplettbausatz.html",
+      "links": {
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2016953-openknx-reg1-multisensor-reg1-sen-multi-reg-f%C3%BCr-div-sensoren-mit-bin%C3%A4reing%C3%A4ngen",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-SEN-Multi.jpg",
+      "wiki": "https://device.openknx.de/REG1-SEN-Multi",
+      "applications": {
+        "OAM-Meter": {
+          "since": "1.0.0",
+          "latest": "1.0.0"
+        }
+      }
+    },
+    "REG1-GW-RF868M": {
+      "name": "REG1 868MHz-Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "knx": [
+        "tp"
+      ],
+      "status": "alpha",
+      "availability": [
+        "opensource",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät mit 868MHz-Funkschnittstelle. Wireless-M-Bus-Gateway zur Anbindung von Wasser- und Wärmemengenzählern, zusätzlich zwei SML-Schnittstellen für Stromzähler.",
+      "links": {
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1988477-openknx-z%C3%A4hlermodul-sml",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://data.openknx.de/devices/img/REG1-GW-RF868M.jpg",
+      "wiki": "https://device.openknx.de/REG1-GW-RF868M",
+      "applications": {
+        "OAM-Meter": {
+          "since": "1.0.0",
+          "latest": "1.0.0"
+        }
+      }
+    }
+  }
+}

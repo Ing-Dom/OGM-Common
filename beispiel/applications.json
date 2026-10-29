@@ -1,0 +1,78 @@
+{
+  "OpenKnxContentType": "OpenKNX/Applications",
+  "OpenKnxFormatVersion": "v1.0.0",
+  "generated": "2026-10-28T06:29:00Z",
+  "data": {
+    "OAM-RaumController": {
+      "title": "RaumController",
+      "description": "Alle Module, um einen Raum zu automatisieren: Sensorik, Präsenz, Logik, virtuelle Taster, Heizungsregelung.",
+      "category": "universal",
+      "status": "stable",
+      "maintainer": "mumpf",
+      "archived": false,
+      "links": {
+        "repo": "https://github.com/OpenKNX/OAM-RaumController",
+        "wiki": "https://openknx.atlassian.net/wiki/spaces/OpenKNX/pages/8192819/RaumController",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2060692-openknx-raumcontroller-release-oder-aus-dem-sensormodul-wird-ein-raumcontroller",
+        "docs": "https://github.com/OpenKNX/OAM-RaumController/blob/v1/doc/Applikationsbeschreibung-RaumController.md"
+      },
+      "variants": {
+        "0xA012": { "label": "release", "name": "RaumController", "latest": "5.5.1" },
+        "0xA011": { "label": "dev", "name": "RaumController-Dev", "latest": "5.5.2" }
+      },
+      "devices": ["REG1-Base", "REG1-Base-V0", "REG1-Base-IP", "REG1-LAN-TP-Base", "UP1-SEN-8x", "UP1-PM-HF", "UP1-TAS-4x", "PiPico-BCU-Connector"]
+    },
+    "OAM-Meter": {
+      "title": "Zählermodul",
+      "description": "Zählerfunktionen: Impulszähler, Betriebsstunden, Zwischen- und Tarifzähler, Stromzähler per SML, Wireless M-Bus.",
+      "category": "sensor",
+      "status": "stable",
+      "maintainer": "CK",
+      "archived": false,
+      "links": {
+        "repo": "https://github.com/OpenKNX/OAM-Meter",
+        "wiki": "https://openknx.atlassian.net/wiki/spaces/OpenKNX/pages/164120/Z+hlermodul",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1988477-openknx-z%C3%A4hlermodul-sml"
+      },
+      "variants": {
+        "0xA304": { "label": "release", "name": "MeterModule", "latest": "1.0.0" }
+      },
+      "devices": ["REG1-Base", "REG1-Base-V0", "REG1-Base-IP", "REG1-SEN-Multi", "REG1-GW-RF868M", "PiPico-BCU-Connector", "UP1-SEN-8x", "REG2-PiPico-V1-DD-Meter"]
+    },
+    "OAM-IP-Router": {
+      "title": "IP-Router",
+      "description": "KNXnet/IP-Router und Tunneling-Schnittstelle zwischen KNX-TP und IP.",
+      "category": "network",
+      "status": "stable",
+      "maintainer": "Ing-Dom",
+      "archived": false,
+      "links": {
+        "repo": "https://github.com/OpenKNX/OAM-IP-Router",
+        "wiki": "https://openknx.atlassian.net/wiki/spaces/OpenKNX/pages/524357/IP-Router",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2016368-openknx-reg1-goes-esp32"
+      },
+      "variants": {
+        "0xA11F": { "label": "release", "name": "IP-Router", "latest": "0.7.0" },
+        "0xA11E": { "label": "dev", "name": "IP-Router-Dev", "latest": "0.7.1" }
+      },
+      "devices": ["REG1-Eth", "REG1-LAN-TP-Base"]
+    },
+    "OAM-StateEngine": {
+      "title": "Zustandsautomaten (StateEngine)",
+      "description": "Zustandsmodelle auf Basis deterministischer endlicher Automaten, in der ETS konfigurierbar.",
+      "category": "universal",
+      "status": "beta",
+      "maintainer": "CK",
+      "archived": false,
+      "links": {
+        "repo": "https://github.com/OpenKNX/OAM-StateEngine",
+        "wiki": "https://openknx.atlassian.net/wiki/spaces/OpenKNX/pages/86474753/Zustandsautomaten+StateEngine",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2024474-openknx-stateengine-universelle-zustandsautomaten-in-knx"
+      },
+      "variants": {
+        "0xAC0D": { "label": "dfa16", "name": "StateEngine-DFA16", "latest": "0.8.2" }
+      },
+      "devices": ["REG1-Base", "REG1-Base-V0", "PiPico-BCU-Connector", "REG2-PiPico-V1", "OpenKNXiao-Mini-RP2040-V1", "OpenKNXiao-Mini-ESP32-V1"]
+    }
+  }
+}
