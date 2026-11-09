@@ -194,7 +194,16 @@ def _generate_openknx_build_json():
         # PlatformIO does it for its own compiler calls (builder/tools/piomaxlen.py):
         # GCC reads a backslash in a response file as an escape, so Windows paths use "/".
         flags = projenv.subst_list("$CXXFLAGS $CCFLAGS $CPPFLAGS $_CPPDEFFLAGS $_CPPINCFLAGS")[0]
-        args = [quote_spaces(str(flag)) for flag in flags]
+        # dependency output (e.g. -MMD on ESP32) would write "-.d" for stdin into the project
+        args = []
+        skip_next = False
+        for flag in (str(flag) for flag in flags):
+            if skip_next:
+                skip_next = False
+            elif flag in ("-MF", "-MT", "-MQ"):
+                skip_next = True
+            elif flag not in ("-M", "-MM", "-MD", "-MMD", "-MP", "-MG") and not flag.startswith(("-MF", "-MT", "-MQ")):
+                args.append(quote_spaces(flag))
         if os.name == "nt":
             args = [re.sub(r"\\([^\"'\\]|$)", r"/\1", arg) for arg in args]
         build_dir = env.subst("$BUILD_DIR")
