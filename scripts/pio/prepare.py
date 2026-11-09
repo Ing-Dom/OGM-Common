@@ -185,16 +185,29 @@ print()
 # here is only reported, it never fails the build.
 
 def _generate_openknx_build_json():
-    from SCons.Subst import escape_list
+    from SCons.Subst import quote_spaces
     print("{}Generate openknx-build.json{}".format(console_color.YELLOW, console_color.END))
     build_info = {}
     try:
-        words = projenv.subst_list("$CXX -x c++ $CXXFLAGS $CCFLAGS $CPPFLAGS $_CPPDEFFLAGS $_CPPINCFLAGS -E -P -")[0]
-        cmd = " ".join(escape_list(words, projenv["ESCAPE"]))
+        # With the include paths of all libraries the command line exceeds the Windows
+        # limits, so the flags go into a response file. They are escaped the way
+        # PlatformIO does it for its own compiler calls (builder/tools/piomaxlen.py):
+        # GCC reads a backslash in a response file as an escape, so Windows paths use "/".
+        flags = projenv.subst_list("$CXXFLAGS $CCFLAGS $CPPFLAGS $_CPPDEFFLAGS $_CPPINCFLAGS")[0]
+        args = [quote_spaces(str(flag)) for flag in flags]
+        if os.name == "nt":
+            args = [re.sub(r"\\([^\"'\\]|$)", r"/\1", arg) for arg in args]
+        build_dir = env.subst("$BUILD_DIR")
+        os.makedirs(build_dir, exist_ok=True)
+        rsp_path = os.path.join(build_dir, "openknx-build.rsp")
+        with open(rsp_path, "w", encoding="utf-8") as rsp_file:
+            rsp_file.write(" ".join(args))
+        cxx = projenv.subst("$CXX")
+        cmd = [projenv.WhereIs(cxx) or cxx, "-x", "c++", "@" + rsp_path, "-E", "-P", "-"]
         # the markers get the macros expanded, so DEVICE_ID PREFIX_ID "-X" style
         # definitions come out as adjacent string literals and are joined here
         snippet = "#include <hardware.h>\nOPENKNX_MARK_deviceId DEVICE_ID\nOPENKNX_MARK_deviceName DEVICE_NAME\n"
-        result = subprocess.run(cmd, shell=True, input=snippet, capture_output=True,
+        result = subprocess.run(cmd, input=snippet, capture_output=True,
                                 encoding="utf-8", errors="replace", env=projenv["ENV"], cwd=projenv.subst("$PROJECT_DIR"))
         if result.returncode != 0:
             print("{}  Preprocessing hardware.h failed: {}{}".format(console_color.YELLOW, result.stderr.strip(), console_color.END))
@@ -204,7 +217,7 @@ def _generate_openknx_build_json():
                 build_info[key] = "".join(literals)
         if build_info:
             print("{}  Device: {} ({}){}".format(console_color.CYAN, build_info.get("deviceName"), build_info.get("deviceId"), console_color.END))
-        else:
+        elif result.returncode == 0:
             print("{}  No DEVICE_ID defined for {}{}".format(console_color.CYAN, env["PIOENV"], console_color.END))
     except Exception as error:
         print("{}  Could not determine device id: {}{}".format(console_color.YELLOW, error, console_color.END))
